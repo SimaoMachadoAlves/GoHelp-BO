@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>GoHelp</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="sidebar">
+      <div class="menu-btn">
+        <i class="bi bi-caret-left-fill"></i>
+      </div>
+      <div class="head">
+        <div class="logo">
+          <img src="images/branco1.png" alt="" />
+        </div>
+      </div>
+      <div class="menu">
+        <p class="title">Main</p>
+        <ul>
+          <li class="">
+            <a href="index.html">
+              <i class="icon bi bi-speedometer"></i>
+              <span class="text">Dashboard</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <nav class="nav">
+        <div class="menu">
+          <p class="title">Interface</p>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="icon bi bi-bookmarks"></i>
+                <span class="text">Eventos</span>
+                <i class="arrow bi bi-caret-down-fill"></i>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="vereventos.html"><span class="text">Ver Eventos</span></a></li>
+                <li><a href="pedidoseventos.html"><span class="text">Pedidos de Eventos</span></a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon bi bi-tools"></i>
+                <span class="text">Materiais</span>
+                <i class="arrow bi bi-caret-down-fill"></i>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="materiaisorg.html"><span class="text">Materiais da Organização</span></a></li>
+                <li><a href="materiaisdoados.html"><span class="text">Materiais Doados</span></a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="doacoes.html">
+                <i class="icon bi bi-piggy-bank"></i>
+                <span class="text">Doações</span>
+              </a>
+            </li>
+            <li>
+              <a href="locais.html">
+                <i class="icon bi bi-pin-map"></i>
+                <span class="text">Locais</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="icon bi bi-file-earmark-person"></i>
+                <span class="text">Colaboradores</span>
+                <i class="arrow bi bi-caret-down-fill"></i>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="colaboradores.html"><span class="text">Colaboradores</span></a></li>
+                <li><a href="candidaturas.html"><span class="text">Candidaturas</span></a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="utilizadores.html">
+                <i class="icon bi bi-people"></i>
+                <span class="text">Utilizadores</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="menu">
+        <p class="title">Logout</p>
+        <ul>
+          <li>
+            <a href="login.html">
+              <i class="icon bi bi-box-arrow-right"></i>
+              <span class="text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <div class="container-fluid">
+          <!--Header-->
+          <div class="d-sm-flex align-items-center justify-content-between pt-4 pb-5">
+            <h2 class="h2 text-azul-escuro mb-0">Materiais da Organização</h2>
+          </div>
+          <!--MAIN-->
+
+          <!--Cartão-->
+          <div class="d-flex justify-content-center">
+            <div class="card-colaboradores justify-content-center">
+              <h4 class="card-title mt-2">Materiais</h4>
+              <p class="card-body mt-2 align-left">
+                Equipamento de Som <br>
+                Mobiliário <br>
+                Iluminação <br>
+                Equipamento de Vídeo <br>
+                Acessórios e Diversos <br>
+                Equipamento de Segurança
+              </p>
+            </div>
+          </div>
+
+          <!--Search-->
+          <div class="row  mt-3">
+            <div class="col-md-6 mt-3 justify-content-end align-items-end">
+              <a href="addmaterial.html" class="btn btn-primary">Adicionar</a>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group mt-3 justify-content-end align-items-end ">
+                <input type="text" id="procurar" class="search-control w-25" placeholder="Procurar..."
+                  aria-label="Procurar" aria-describedby="basic-addon1">
+              </div>
+            </div>
+
+          </div>
+          <!--Tabela-->
+          <div class="row d-flex pt-1 pm-2">
+            <div class="col-xl">
+              <table class="table table-primary">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Designação</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col" class="text-end"></th>
+                  </tr>
+                </thead>
+                <tbody id="tabela-materiais">
+                </tbody>
+              </table>
+              <nav aria-label="paginacao-tabelas" class="paginacao-tabelas">
+                <ul class="pagination justify-content-end">
+                  <!-- Paginação será gerada dinamicamente -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Go Help 2024</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+    </div>
+
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script src="js/SBscript.js"></script>
+  <script src="js/PreencherTabelaMateriaisOrg.js"></script>
+  <script src="js/localStorage.js"></script> 
+
+</body>
+
+</html>
